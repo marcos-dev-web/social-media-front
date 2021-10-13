@@ -12,35 +12,31 @@ export const Container = styled.main`
   background: #f2f3f5;
 `;
 
-export const Option = styled.div`
+export const Option = styled.a`
   width: 95%;
   height: 45px;
   max-width: 400px;
   margin: 1rem 0;
 
-  border-radius: 8px;
+  border-radius: 0;
+  border: 1px solid lightgray;
 
   overflow: hidden;
 
   cursor: pointer;
 
-  background-color: white;
-  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  background-color: #f8f8f8;
 
-  & > a {
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 1rem;
-    padding-top: 0.6rem;
-    font-size: 1rem;
-    color: dodgerblue;
-    text-decoration: none;
-  }
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 0.6rem;
+  font-size: 1rem;
+  color: #666;
+  text-decoration: none;
 
   &:hover {
-    background-color: #f8f8f8;
+    background-color: #f5f5f5;
 
     transform: scale(1.05);
   }

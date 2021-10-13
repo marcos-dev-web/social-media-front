@@ -71,7 +71,7 @@ export const CommentsList = styled.div`
   width: 90%;
   margin-top: 0.5rem;
   margin-left: 10%;
-  max-height: 200px;
+  max-height: 100px;
   overflow-y: scroll;
 
   &::-webkit-scrollbar {
@@ -117,23 +117,6 @@ export const InputComment = styled.input`
   width: 100%;
   outline-color: dodgerblue;
 `;
-export const Loader = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: #f2f3f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10000;
-
-  & p {
-    font-size: 1rem;
-    color: #404452;
-  }
-`;
 
 export const ButtonBack = styled.a`
   position: fixed;
@@ -142,4 +125,16 @@ export const ButtonBack = styled.a`
   color: dodgerblue;
   text-decoration: none;
   cursor: pointer;
+`;
+
+export const Like = styled.button`
+  display: block;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-left: auto;
+  margin-top: 1rem;
+  padding: 0.2rem 1rem;
+
+  border: 1px solid lightsalmon;
+  background: lightsalmon;
 `;

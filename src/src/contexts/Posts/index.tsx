@@ -2,6 +2,8 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 
 import getAllPost from "../../services/getAllPost";
 import doComment from "../../services/comment";
+import doPost from "../../services/post";
+import doLike from "../../services/like";
 
 import { Context, Post } from "./types";
 
@@ -13,7 +15,8 @@ const PostsProvider: React.FC = ({ children }) => {
   useEffect(() => {
     async function fetch() {
       const posts = await getAllPost();
-      setPostList(posts);
+
+      setPostList(posts.sort((a, b) => (a.likes < b.likes ? 1 : -1)));
     }
 
     fetch();
@@ -25,6 +28,7 @@ const PostsProvider: React.FC = ({ children }) => {
   }
 
   async function post(title: string, content: string) {
+    await doPost(title, content);
     await refreshList();
   }
 
@@ -35,6 +39,7 @@ const PostsProvider: React.FC = ({ children }) => {
   }
 
   async function like(postId: number) {
+    await doLike(postId);
     await refreshList();
   }
 
