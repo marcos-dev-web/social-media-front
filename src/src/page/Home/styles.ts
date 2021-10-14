@@ -18,7 +18,7 @@ export const Option = styled.a`
   max-width: 400px;
   margin: 1rem 0;
 
-  border-radius: 0;
+  border-radius: 5px;
   border: 1px solid lightgray;
 
   overflow: hidden;

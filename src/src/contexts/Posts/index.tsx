@@ -5,12 +5,12 @@ import doComment from "../../services/comment";
 import doPost from "../../services/post";
 import doLike from "../../services/like";
 
-import { Context, Post } from "./types";
+import { IContext, IPost } from "./types";
 
-const PostsContext = createContext({} as Context);
+const PostsContext = createContext({} as IContext);
 
 const PostsProvider: React.FC = ({ children }) => {
-  const [postList, setPostList] = useState<Array<Post>>([]);
+  const [postList, setPostList] = useState<Array<IPost>>([]);
 
   useEffect(() => {
     async function fetch() {

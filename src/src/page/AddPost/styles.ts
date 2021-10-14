@@ -16,6 +16,7 @@ export const MessageBox = styled.div`
   padding: 1rem;
 
   border: 1px solid lightgray;
+  border-radius: 5px;
 
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
@@ -37,7 +38,7 @@ export const Box = styled.div`
 export const InputContainer = styled.div`
   width: 95%;
 
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray; */
 
   margin: 0 auto;
   margin-top: 1rem;
@@ -55,14 +56,12 @@ export const Input = styled.input`
   color: #333333;
   margin-top: 0.5rem;
   border: 1px solid lightgray;
+  border-radius: 5px;
 
   background-color: #f8f8f8;
   padding: 0.1rem 0.5rem;
-  outline: 0;
 
-  &:focus {
-    border-color: dodgerblue;
-  }
+  outline-color: dodgerblue;
 `;
 
 export const TextArea = styled.textarea`
@@ -72,10 +71,11 @@ export const TextArea = styled.textarea`
   color: #333333;
   margin-top: 0.5rem;
   border: 1px solid lightgray;
+  border-radius: 5px;
 
   background-color: #f8f8f8;
   padding: 0.1rem 0.5rem;
-  outline: 0;
+  outline-color: dodgerblue;
 
   min-height: 100px;
   max-height: 200px;
@@ -91,20 +91,17 @@ export const TextArea = styled.textarea`
   &::-webkit-scrollbar-thumb {
     background: gray;
   }
-
-  &:focus {
-    border-color: dodgerblue;
-  }
 `;
 
 export const Button = styled.button`
   width: 95%;
-  height: 45px;
+  height: 40px;
   font-size: 1rem;
   display: block;
   margin: 0 auto;
   margin-top: 2rem;
   border: 0;
+  border-radius: 5px;
   cursor: pointer;
   background-color: dodgerblue;
   color: white;
